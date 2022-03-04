@@ -30,7 +30,7 @@ window.addEventListener("load", () => {
             fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`)
             .then((res) => {
                 if(!res.ok){
-                    alert("You city name is not correct\n Please Enter the Right name of city");
+                    alert("Ooops! sorry city name is not correct😔\n Please Enter the Right name and try again.🙂");
                     let message = res.status
                     throw new Error(message)
                 }
@@ -56,7 +56,7 @@ const weather = (city) => {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`)
         .then((res) => {
             if(!res.ok){
-                alert("You city name is not correct\n Please Enter the Right name of city");
+                alert("Ooops! sorry city name is not correct😔\n Please Enter the Right name and try again.🙂");
                 let message = res.status
                 throw new Error(message)
             }
