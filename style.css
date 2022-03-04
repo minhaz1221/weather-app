@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    /* background: url("https://source.unsplash.com/1600x900/?landscape"); */
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+.weather-box {
+    background: rgba(110, 110, 110, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    z-index: 1;
+    padding: 10px 20px;
+    border-radius: 6px;
+    min-width: 700px;
+    color: white;
+}
+.search-item {
+    align-self: center;
+}
+.search-box input.inpt {
+    border: none;
+    outline: none;
+    padding: 3px 20px;
+    font-size: 15px;
+    border-radius: 18px;
+    background: #eeeeeeb3;
+}
+.local-time h2 {
+    font-size: 18px;
+}
+.city {
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+.citytxt{font-size: 50px;margin-left: 13px;font-weight: 600;text-align: center; margin-bottom: 25px;}
+
+.weather-info {display: flex;margin-bottom: 20px;}
+.weather-info div:first-child {
+    display: flex;
+}
+
+.weather-info p {
+    font-size: 40px;
+}
+
+.temp {
+    font-size: 50px;
+    margin-left: 20px;
+    align-self: center;
+}
+
+.wather-state {
+    margin-left: 33px;
+    align-self: end;
+}
+
+.wather-state span {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.other-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.other-info div {padding: 20px 20px;text-align: center;background: #4b414ca1;border: 1px solid #7a7979d9;border-radius: 5px;}
+
+.other-info div h2 {
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.other-info div h3 {
+    font-size: 18px;
+    font-weight: 400;
+}
+.local-time {font-size: 15px;}
+
+.search-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.local-time span {
+    font-size: 30px;
+}
+.info {
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+.search-item i {
+    font-size: 17px;
+    width: 30px;
+    height: 30px;
+    background: #eeeeeeb3;
+    color: black;
+    text-align: center;
+    border-radius: 15px;
+    padding: 7px;
+    cursor: pointer;
+}
+.tooglebtn {
+    display: flex;
+}
+.tooglebtn h3 {
+    margin: 0;
+    align-self: center;
+}
+.form-check.form-switch {
+    align-self: center;
+}
+.tooglebtn h3:first-child {
+    margin-right: 10px;
+}
+/* Footer */
+footer div {
+    width: 100%;
+    background: #1c151594;
+    color: white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    padding: 10px;
+    font-size: 13px;
+}
+
+/* loading */
+.loading {
+    visibility: hidden;
+    position: relative;
+}
+.loading::after{
+    visibility: visible;
+    content: 'Loading...';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+}
+
+/* Responsive for several Device */
+@media only screen and (max-width: 1440px) {
+    .weather-box{
+        width: 700px;
+        margin: 0 auto;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .weather-box {
+        min-width: inherit;
+        width: 85%;
+        margin: 0 auto;
+    }
+    .weather-info {
+        flex-direction: column;
+    }
+    .local-time span {
+        font-size: 18px;
+    }
+    .search-box input.inpt {
+        padding: 3px 17px;
+        font-size: 13px;
+        width: 200px;
+    }
+    .search-item i {
+        font-size: 15px;
+        width: 25px;
+        height: 25px;
+        padding: 5px;
+    }
+    .temp {
+        font-size: 40px;
+        margin-left: 0;;
+    }
+    .wather-state span {
+        font-size: 20px;
+    }
+    .wather-state {
+        font-size: 14px;
+    }
+    .other-info div h2 {
+        font-size: 16px;
+    }
+    .other-info div h3 {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .search-box input.inpt {
+        padding: 2px 11px;
+        font-size: 12px;
+        width: 150px;
+    }
+    .citytxt {
+        font-size: 40px;
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+    .temp {
+        font-size: 32px;
+        margin-left: 0;
+    }
+    img.icon {
+        width: 20%;
+    }
+    .other-info div {
+        padding: 10px 10px;
+    }
+    .info {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .search-box input.inpt {
+        width: 110px;
+    }
+    h3:first-child {
+        margin-right: 6px;
+    }
+    .tooglebtn h3 {
+        font-size: 14px;
+    }
+    .search-item i{
+        font-size: 13px;
+        width: 22px;
+        height: 22px;
+        padding: 5px;
+    }
+}
