@@ -30,7 +30,7 @@ window.addEventListener("load", () => {
             fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`)
             .then((res) => {
                 if(!res.ok){
-                    alert("Ooops! sorry city name is not correct😔\n Please Enter the Right name and try again.🙂");
+                    alert("Ooops! sorry city name is not correct.\nPlease Enter the Right name and try again.");
                     let message = res.status
                     throw new Error(message)
                 }
@@ -56,7 +56,7 @@ const weather = (city) => {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`)
         .then((res) => {
             if(!res.ok){
-                alert("Ooops! sorry city name is not correct😔\n Please Enter the Right name and try again.🙂");
+                alert("Ooops! sorry city name is not correct.\nPlease Enter the Right name and try again.");
                 let message = res.status
                 throw new Error(message)
             }
@@ -98,10 +98,9 @@ const displayWeather = (data) =>{
         })
         
         //Change background by city name
-        document.body.style.backgroundImage = `url(https://source.unsplash.com/1600x900/?${main})`;
-        if(window.innerWidth < 500){
-            document.body.style.backgroundImage = `url(https://source.unsplash.com/500x900/?${main})`;
-        }
+        let width = window.innerWidth;
+        let heigh = window.innerHeight;
+        document.body.style.backgroundImage = `url(https://source.unsplash.com/${width}x${heigh}/?${main})`;
 }
 
 Search_icon.addEventListener('click', ()=>{
