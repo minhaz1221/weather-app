@@ -98,9 +98,8 @@ const displayWeather = (data) =>{
         })
         
         //Change background by city name
-        let width = window.innerWidth;
-        let heigh = window.innerHeight;
-        document.body.style.backgroundImage = `url(https://source.unsplash.com/${width}x${heigh}/?${main})`;
+       let width = window.innerWidth;
+       document.body.style.backgroundImage = `url(https://source.unsplash.com/${width}x900/?${main})`;
 }
 
 Search_icon.addEventListener('click', ()=>{
